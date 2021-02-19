@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args":[
+                "--vocabPath", ".//corpus//charList.txt",
+                "--dataPath", ".//corpus//corpus0_seg_uchar.txt",
+                "--configPath", ".//configs//config_lstm_128dim_2L.json",
+                "--seqLength", "16", 
+                "--batchSize", "512",
+                "--epochNum", "10", 
+                "--learningRate", "1e-4",
+                "--savePath", ".//models/model.pt",
+            ]
+        }
+    ]
+}
